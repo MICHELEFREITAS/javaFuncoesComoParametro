@@ -18,8 +18,9 @@ public class Program {
 		
         ProductService ps = new ProductService();
         
-        //chamando o ProductService e passando a lista guardando na variável sum
-        double sum = ps.filteredSum(list);
+        //chamando o ProductService e passando a lista e também um predicado (lambda p ->...) de como
+        // quero filtrar a lista e guardando na variável sum
+        double sum = ps.filteredSum(list, p -> p.getName().charAt(0)=='T');
         
         System.out.println("Sum = " + String.format("%.2f", sum));
 	
