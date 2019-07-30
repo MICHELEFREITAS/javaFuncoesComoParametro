@@ -20,7 +20,8 @@ public class Program {
         
         //chamando o ProductService e passando a lista e também um predicado (lambda p ->...) de como
         // quero filtrar a lista e guardando na variável sum
-        double sum = ps.filteredSum(list, p -> p.getName().charAt(0)=='T');
+        //Função mais flexível que posso colocar a condição que quero filtrar para fazer a soma
+        double sum = ps.filteredSum(list, p -> p.getPrice() < 100);
         
         System.out.println("Sum = " + String.format("%.2f", sum));
 	

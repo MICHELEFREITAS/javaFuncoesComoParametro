@@ -7,6 +7,7 @@ import entities.Product;
 
 public class ProductService {
 	//melhorando função para receber predicate como parametro com nome critério
+	//função que recebe outra função lambda como argumento
 	public double filteredSum(List<Product> list, Predicate<Product> criteria) {
 		double sum =0.0;
 		for (Product p : list) {
